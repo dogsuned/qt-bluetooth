@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <qbluetoothlocaldevice.h>
+#include <qlistwidget.h>
 
 QT_FORWARD_DECLARE_CLASS(QBluetoothDeviceDiscoveryAgent)
 QT_FORWARD_DECLARE_CLASS(QBluetoothDeviceInfo)
@@ -24,10 +25,10 @@ public slots:
     void startScan();
     void addDevice(const QBluetoothDeviceInfo&);
     void scanFinished();
-    // void displayPairingMenu(const QPoint &pos);
-    // void pairingDone(const QBluetoothAddress&, QBluetoothLocalDevice::Pairing);
+    void displayPairingMenu(const QPoint &pos);
+    void pairingDone(const QBluetoothAddress&, QBluetoothLocalDevice::Pairing);
     // void setGeneralUnlimited(bool unlimited);
-    // void itemActivated(QListWidgetItem *item);
+    void itemActivated(QListWidgetItem *item);
     // void hostModeStateChanged(QBluetoothLocalDevice::HostMode);
 
 private:
