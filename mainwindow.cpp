@@ -94,7 +94,7 @@ void MainWindow::itemActivated(QListWidgetItem *item)
         return;
     }
 
-    QBluetoothAddress address (text.mid(l + 1, r - l - 1));
+    QBluetoothAddress address(text.mid(l + 1, r - l - 1));
     QString name(text.left(text.indexOf(' ')));
 
     ServiceDiscoveryDialog d(name, address);

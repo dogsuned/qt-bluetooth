@@ -2,7 +2,7 @@
 #define SERVICE_H
 
 #include "ui_service.h"
-
+#include <qbluetoothuuid.h>
 #include <QDialog>
 
 QT_FORWARD_DECLARE_CLASS(QBluetoothAddress)
@@ -21,6 +21,10 @@ public:
 
 public slots:
     void addService(const QBluetoothServiceInfo&);
+    void serviceDiscovered(const QBluetoothUuid &gatt);
+    void discoveryFinished(void);
+    void connected(void);
+    void disconnected(void);
 
 private:
     QBluetoothServiceDiscoveryAgent *discoveryAgent;
